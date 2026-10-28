@@ -35,8 +35,8 @@
 // ===========================================================================
 
 // --- WiFi (la ESP32 sólo se conecta a redes de 2.4 GHz) ---
-const char* WIFI_SSID     = "TU_WIFI";
-const char* WIFI_PASSWORD = "TU_CLAVE_WIFI";
+const char* WIFI_SSID     = "Grupo13";
+const char* WIFI_PASSWORD = "12345678";
 const unsigned long WIFI_REINTENTO_MS = 10000;            // reintento cada 10 s si se cae el WiFi
 
 // --- ThingSpeak (sale de la pestaña "API Keys" del canal) ---
