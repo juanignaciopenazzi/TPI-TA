@@ -4,15 +4,12 @@
 
 Lo que se sube a la tarea de la UV:
 
-- [ ] Reemplazar **`XX`** por el número de grupo en:
-  - nombre de las carpetas y archivos (`sketch_envio_grupo_07/sketch_envio_grupo_07.ino`, etc.)
-  - `OTA_NOMBRE` dentro de los dos sketches
-  - el encabezado de los dos sketches (`Grupo XX`)
-- [ ] En **la copia que se entrega**, completar `WIFI_NOMBRE`, `WIFI_CLAVE`, `CANAL_ID`, `WRITE_API_KEY` (en el repo de GitHub pueden quedar los placeholders).
+- [ ] Confirmar que las carpetas/archivos, `OTA_NOMBRE` y encabezados usen el Grupo 13 (`ESP32-OTA-G13`).
+- [ ] En **la copia que se entrega**, completar `WIFI_SSID`, `WIFI_PASSWORD`, `CANAL_ID` y `WRITE_API_KEY` en el Sketch 1; configurar `READ_API_KEY` sólo si el canal es privado. En el repositorio pueden quedar los placeholders.
 - [ ] Ajustar pines y pantalla según lo que encontraron con `prueba_pines`.
 - [ ] Probar en la placa que **los dos sketches funcionan** (ver 8.2). Para la Aprobación Directa tiene que andar en esta entrega.
-- [ ] Completar `integrantes_grupo_XX.txt` (Apellido, Nombre, Legajo de todos + Channel ID + Write API Key) y renombrarlo con el número de grupo.
-- [ ] Subir a la UV: `sketch_envio_grupo_XX.ino`, `sketch_lectura_grupo_XX.ino` y el `.txt`.
+- [ ] Completar `integrantes_grupo_13.txt` (Apellido, Nombre, Legajo de todos + Channel ID + Write API Key).
+- [ ] Subir a la UV: `sketch_envio_grupo_13.ino`, `sketch_lectura_grupo_13.ino` y el `.txt`.
 - [ ] Verificar que el canal de ThingSpeak está en **público** (pestaña *Sharing*).
 
 ## 8.2 Guion para probar / demostrar
@@ -29,7 +26,7 @@ Lo que se sube a la tarea de la UV:
 
 6. Anotar los valores del último envío.
 7. (Opcional) desenchufar el USB y alimentar con un cargador.
-8. En el IDE elegir el puerto de red `esp32-grupo-XX` y subir el Sketch 2. Pantalla: "Actualizando OTA 10 % … 100 %".
+8. En el IDE elegir el puerto de red `ESP32-OTA-G13` y subir el Sketch 2. Pantalla: "Actualizando OTA 10 % … 100 %".
 9. Arranca el Sketch 2: muestra los valores anotados, rotando de a 3.
 10. Apretar el pulsador varias veces → `Pulsos` aumenta de a uno.
 
@@ -54,7 +51,7 @@ La cuenta gratuita de ThingSpeak acepta un dato cada 15 s como mínimo; 16 s da 
 `delay` bloquea todo: no se actualizarían la pantalla ni los LEDs, y lo más grave, no se llamaría `ArduinoOTA.handle()`, entonces no se podría subir por OTA.
 
 **¿Qué es OTA y cómo funciona?**
-Subir el firmware por WiFi. El Sketch 1 escucha en el puerto 3232 y se anuncia por mDNS como `esp32-grupo-XX`. El IDE manda el binario, la ESP32 lo escribe en la otra partición de aplicación (`app1`), lo verifica y reinicia desde ahí.
+Subir el firmware por WiFi. El Sketch 1 escucha en el puerto 3232 y se anuncia por mDNS como `ESP32-OTA-G13`. El IDE manda el binario, la ESP32 lo escribe en la otra partición de aplicación (`app1`), lo verifica y reinicia desde ahí.
 
 **¿Qué pasa si se corta la luz en medio de un OTA?**
 El programa nuevo se escribe en la otra partición; si no se completa, la placa sigue arrancando con el anterior.

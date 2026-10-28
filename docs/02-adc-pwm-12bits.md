@@ -65,6 +65,6 @@ Nuestro sketch usa `#if ESP_ARDUINO_VERSION_MAJOR >= 3` para elegir automáticam
 
 ## 2.5 En el código
 
-Ver sección **6** de [sketch_envio_grupo_XX.ino](../sketch_envio_grupo_XX/sketch_envio_grupo_XX.ino), función `leerPotenciometro()`. En la pantalla aparece como `PWM int: 2048`.
+Ver sección **6** de [sketch_envio_grupo_13.ino](../sketch_envio_grupo_13/sketch_envio_grupo_13.ino), función `leerPotenciometro()`. En la pantalla aparece como `PWM int: 2048`.
 
 ➡️ Siguiente: [3. Pantalla y sensor DHT](03-display-y-dht.md)

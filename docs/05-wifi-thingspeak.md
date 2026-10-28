@@ -17,7 +17,7 @@ Cualquier dispositivo con internet puede **escribir** en el canal (con la *Write
 1. Ir a <https://thingspeak.mathworks.com> → **Sign Up**. Crear una cuenta MathWorks (con el mail de la facultad o personal).
 2. **Channels → My Channels → New Channel**.
 3. Completar:
-   - **Name**: `TPI IoT 4K3 - Grupo XX`
+   - **Name**: `TPI IoT 4K3 - Grupo 13`
    - Tildar **Field 1 a Field 6** y ponerles nombre:
 
      | Field | Nombre |
@@ -48,7 +48,7 @@ Si responde un número (`1`, `2`…) es el número de fila que se agregó: el ca
 
 ```cpp
 WiFi.mode(WIFI_STA);                     // modo "estación": cliente de un router, como un celular
-WiFi.begin(WIFI_NOMBRE, WIFI_CLAVE);
+WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 while (WiFi.status() != WL_CONNECTED) delay(500);
 ```
 
@@ -97,6 +97,6 @@ El temporizador usa el patrón `millis()` (ver [doc 00](00-conceptos-basicos.md)
 
 ## 5.7 En el código
 
-Funciones `conectarWiFi()` y `enviarAThingSpeak()` en [sketch_envio_grupo_XX.ino](../sketch_envio_grupo_XX/sketch_envio_grupo_XX.ino).
+Funciones `conectarWiFi()` y `enviarAThingSpeak()` en [sketch_envio_grupo_13.ino](../sketch_envio_grupo_13/sketch_envio_grupo_13.ino).
 
 ➡️ Siguiente: [6. OTA](06-ota.md)

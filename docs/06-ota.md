@@ -9,7 +9,7 @@
 ## 6.2 ¿Cómo funciona? (la idea)
 
 1. El **Sketch 1** (subido por USB) se conecta al WiFi y se pone a **escuchar en el puerto 3232** — como abrir una "ventanilla" numerada esperando que alguien le hable.
-2. Además se **anuncia** en la red con un nombre (`esp32-grupo-XX`) usando un protocolo llamado **mDNS**. Gracias a eso el Arduino IDE la descubre solo y la muestra como un **"puerto de red"**.
+2. Además se **anuncia** en la red con un nombre (`ESP32-OTA-G13`) usando un protocolo llamado **mDNS**. Gracias a eso el Arduino IDE la descubre solo y la muestra como un **"puerto de red"**.
 3. Cuando en el IDE elegimos ese puerto y subimos el **Sketch 2**, la compu se conecta a esa ventanilla y le manda el programa nuevo.
 4. La ESP32 lo guarda en una **segunda zona de memoria**, verifica que llegó bien, y **se reinicia ejecutando el programa nuevo**.
 
@@ -33,7 +33,7 @@ Mientras corre uno, el nuevo se escribe en el otro. Si la transmisión se corta 
 #include <ArduinoOTA.h>
 
 void iniciarOTA() {
-  ArduinoOTA.setHostname("esp32-grupo-XX");   // nombre que aparece en el IDE
+  ArduinoOTA.setHostname("ESP32-OTA-G13");   // nombre que aparece en el IDE
   ArduinoOTA.setPort(3232);                   // el "puerto establecido"
   ArduinoOTA.begin();                         // empieza a escuchar
 }
@@ -59,11 +59,11 @@ Cuando subimos el Sketch 2, **reemplaza por completo** al Sketch 1. Si el Sketch
 2. Subir el **Sketch 1 por USB**. En el Monitor Serie debería aparecer:
    ```
    Conectado. IP: 192.168.43.120
-   OTA listo: esp32-grupo-XX (192.168.43.120) puerto 3232
+   OTA listo: ESP32-OTA-G13 (192.168.43.120) puerto 3232
    ```
 3. Conectar **la compu a la misma red WiFi** que la ESP32.
 4. Abrir el **Sketch 2** en el IDE.
-5. **Tools → Port**: debería aparecer una sección **Network ports** con `esp32-grupo-XX at 192.168.43.120`. Elegirlo. (Puede tardar hasta un minuto en aparecer; si no aparece, cerrar y abrir el menú.)
+5. **Tools → Port**: debería aparecer una sección **Network ports** con `ESP32-OTA-G13 at 192.168.43.120`. Elegirlo. (Puede tardar hasta un minuto en aparecer; si no aparece, cerrar y abrir el menú.)
 6. Subir (flecha →). Se ve el progreso en el IDE y en la pantalla de la placa. Al terminar, la ESP32 se reinicia con el Sketch 2.
 
 > Para la prueba se puede **desenchufar el USB y alimentar la placa con un cargador**: así queda claro que se subió por WiFi.

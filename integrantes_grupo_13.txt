@@ -1,0 +1,25 @@
+TPI IoT 4K3 - Comunicacion Bidireccional ESP32 - ThingSpeak con Programacion OTA
+Grupo 13
+
+INTEGRANTES (Apellido, Nombre - Legajo)
+- Vinciguerra, Nicolas - 95645
+- Carle, Lucia - 94221
+- Castro, Julieta - 94855
+- Penazzi, Juan Ignacio - 95653
+
+CANAL PUBLICO DE THINGSPEAK
+Channel ID:    3556336
+Write API Key: JQUB9QEZPB1XHC5K
+URL del canal: https://thingspeak.mathworks.com/channels/3556336
+
+Campos del canal:
+Field 1: Valor aleatorio (100 a 500)
+Field 2: Temperatura (C)
+Field 3: Humedad (%)
+Field 4: Tiempo desde el inicio (s)
+Field 5: PWM del LED integrado (0 a 4095)
+Field 6: Brillo del LED externo (%)
+
+ARCHIVOS
+sketch_envio_grupo_13.ino   -> Sketch 1, se sube por USB, envia a ThingSpeak y habilita OTA (puerto 3232)
+sketch_lectura_grupo_13.ino -> Sketch 2, se sube por OTA, lee de ThingSpeak y cuenta pulsaciones

@@ -63,6 +63,6 @@ porcentajeLedExterno = round(pwmLedExterno * 100.0 / PWM_MAXIMO);
 
 ## 4.5 En el código
 
-Funciones `calibrarTouch()` y `leerTouch()` en [sketch_envio_grupo_XX.ino](../sketch_envio_grupo_XX/sketch_envio_grupo_XX.ino). En pantalla: `LED ext: 37%`.
+Funciones `calibrarTouch()` y `leerTouch()` en [sketch_envio_grupo_13.ino](../sketch_envio_grupo_13/sketch_envio_grupo_13.ino). En pantalla: `LED ext: 37%`.
 
 ➡️ Siguiente: [5. WiFi y ThingSpeak](05-wifi-thingspeak.md)

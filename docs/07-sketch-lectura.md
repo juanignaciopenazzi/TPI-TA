@@ -86,6 +86,6 @@ int pantalla = (millis() / 3000) % 2;   // 0,0,0 (3 s) → 1,1,1 (3 s) → 0 ...
 
 ## 7.5 En el código
 
-[sketch_lectura_grupo_XX.ino](../sketch_lectura_grupo_XX/sketch_lectura_grupo_XX.ino): `alPresionarPulsador()`, `leerThingSpeak()`, `actualizarPantalla()`.
+[sketch_lectura_grupo_13.ino](../sketch_lectura_grupo_13/sketch_lectura_grupo_13.ino): `alPresionarPulsador()`, `leerThingSpeak()`, `actualizarPantalla()`.
 
 ➡️ Siguiente: [8. Entrega y defensa](08-entrega-y-defensa.md)
